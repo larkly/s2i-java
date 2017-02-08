@@ -4,7 +4,11 @@
           xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0 http://maven.apache.org/xsd/settings-1.0.0.xsd">
 
  <mirrors>
-   <!-- ### configured mirrors ### -->
+    <mirror>\
+      <id>mirror.default</id>\
+      <url>https://artifactory.netent.com/artifactory/plugins-release</url>\
+      <mirrorOf>external:*</mirrorOf>\
+    </mirror>
  </mirrors>
 
  <proxies>
