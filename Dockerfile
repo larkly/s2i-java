@@ -45,7 +45,7 @@ COPY ./contrib/settings.xml /opt/app-root/src/.m2/
 LABEL io.openshift.s2i.scripts-url=image:///usr/local/sti
 COPY ./sti/bin/ /usr/local/sti
 
-RUN chown -R 1001:1001 /opt/openshift
+RUN chown -R 1001:1001 /opt/openshift /opt/app-root/src/.m2/
 
 # This default user is created in the openshift/base-centos7 image
 USER 1001
