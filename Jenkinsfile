@@ -1,8 +1,8 @@
-node ('maven') {
-    checkout scm
-    sh 'mvn -Dmaven.test.failure.ignore=true test'
-    step([$class: 'JUnitResultArchiver', testResults: '**/target/surefire-reports/TEST-*.xml'])
-}
+//node ('maven') {
+//    checkout scm
+//    sh 'mvn -Dmaven.test.failure.ignore=true test'
+//    step([$class: 'JUnitResultArchiver', testResults: '**/target/surefire-reports/TEST-*.xml'])
+//}
 
 node {
     stage('BuildS2I') {
