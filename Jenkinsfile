@@ -12,5 +12,6 @@ node {
     
     stage('BuildApp') {
         openshiftBuild apiURL: '', authToken: '', bldCfg: 's2i-app', buildName: '', checkForTriggeredDeployments: 'true', commitID: '', namespace: 'bosse-demo-dev', showBuildLogs: 'true', waitTime: '', waitUnit: 'sec'
+        openshiftDeploy apiURL: '', authToken: '', depCfg: 's2i-app', namespace: 'bosse-demo-dev', verbose: 'false', waitTime: '', waitUnit: 'sec'
     }
 }
